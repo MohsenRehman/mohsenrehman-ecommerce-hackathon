@@ -1,0 +1,351 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* dark mode design start */
+/* Body default (light mode) */
+body {
+  background-color: #fff;
+  color: #222;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: Arial, sans-serif;
+}
+
+/* Dark mode */
+body.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hero-section .herocontent h1,
+.hero-section .herocontent p,
+.hero-section button {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hero Section Dark */
+body.dark .hero-section {
+  background-color: #1e1e1e;
+  /* color: #f1f1f1; */
+}
+.herocontent h1 p {
+  color: #f1f1f1;   
+}
+
+body.dark .hero-section button {
+  background-color: #ff6f61;
+  color: #fff;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Product Cards */
+.product-card {
+  background-color: #f8f8f8;
+  color: #222;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark .product-card {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+/* Images (optional dark border) */
+body.dark .product-card img {
+  border: 1px solid #333;
+}
+/* dark mode design end */
+
+header {
+  background: gainsboro;
+  display: flex;
+}
+.headerlogo img {
+  border: 3px solid green;
+  border-radius: 90px;
+}
+.rightdivnavbar {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 65px;
+}
+nav li {
+  list-style: none;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+nav a:hover {
+  color: red;
+}
+
+.leftdivnavbar {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+}
+.search-container input {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid gray;
+  background: #f0f0f0;
+  justify-content: space-evenly;
+}
+.search-container span {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.navbar-buttons {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.navbar-buttons button {
+  padding: 8px 10px;
+  font-size: 16px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.navbar-buttons button:hover {
+  background: darkgreen;
+}
+
+/* hero section design start  */
+
+
+/* Hero Section Container */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 60px;
+  height: 500px;
+  position: relative;
+  background-color: #f8f8f8;
+  gap: 20px;
+  flex-wrap: wrap; /* makes it responsive on mobile */
+}
+
+/* Text Content */
+.herocontent {
+  flex: 1;
+  min-width: 300px;
+}
+
+.herocontent h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  color: #222;
+}
+
+.herocontent p {
+  font-size: 1.1rem;
+  margin: 1rem 0 2rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.herocontent button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.herocontent button:hover {
+  background-color: #ff3b2d;
+}
+
+/* Slider Container */
+.heroimage {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Each slide */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none; /* hide all slides by default */
+  transition: opacity 0.8s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Show active slide */
+.slide.active {
+  display: block;
+  opacity: 1;
+}
+/* hero section design end */
+
+/* product card render design start */
+.categoriesheading {
+  text-align: center;
+  margin: 40px 0 20px 0;
+  font-size: 28px;
+  color: #333;
+  font-family: 'Courier New', Courier, monospace;
+}
+.categories-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.category-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.category-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+/* Container as grid */
+#productContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 60px; /* space between products */
+  padding: 20px;
+}
+
+/* Each product card */
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #fff;
+}
+
+/* Hover effect */
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Product image */
+.product-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Title */
+.product-title {
+  font-size: 18px;
+  margin: 10px 0 5px 0;
+  color: #333;
+}
+
+/* Price */
+.product-price {
+  font-size: 16px;
+  color: #f85a40; /* highlight price */
+  font-weight: bold;
+}
+
+.add-to-cart {
+  background-color: #f85a40;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-to-cart:hover {
+  background-color: #e14a2d;
+}
+.add-to-whitelist {
+    margin-top: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* product card render design end */

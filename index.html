@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerence</title>
+    <link rel="stylesheet" href="style.css" />
+    <script async src="script.js"></script>
+    <script async src="heroslider.js"></script>
+    <script async src="searchbyCASE.js"></script>
+    <script async src="darkmode.js"></script>
+    <!-- <script async src="addtocart.js"></script> -->
+  </head>
+  <body>
+    <header>
+      <div class="rightdivnavbar">
+        <div class="headerlogo">
+          <img
+            ckass="logo"
+            src="images/download (1).png"
+            width="120px"
+            height="120px"
+            alt="E-Commerence Logo"
+          />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="leftdivnavbar">
+        <div class="search-container">
+          <input onclick="searchProducts()" id="searchInput" type="text" placeholder="Search..." />
+        <span onclick="addToCart()">❤️</span>
+        <button onclick="toggleCart()">🛒 Cart (<span id="cartBadge">0</span>)</button>
+        <div id="cartContainer" class="cart"></div>
+        <div></div>
+        
+        </div>
+        <div class="navbar-buttons">
+            <a href="loging.html"><button >Login</button></a>
+            <a href="signup.html"><button>Sign Up</button></a>
+           <button id="darkModeBtn">Dark Mode</button>
+        </div>
+      </div>
+    </header>
+
+
+
+<section class="hero-section">
+  <div class="herocontent">
+    <h1>Classic Exclusive</h1>
+    <h1>Welcome to our E-Commerce Store</h1>
+    <p>Discover amazing products at unbeatable prices!</p>
+    <button>Shop Now</button>
+  </div>
+
+  <!-- Hero Slider Images -->
+  <div class="heroimage slider">
+    <div class="slide active">
+      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80" alt="Hero 1">
+    </div>
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80" alt="Hero 2">
+    </div>
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1200&q=80" alt="Hero 3">
+    </div>
+
+
+</section>
+
+    <!-- shop by categories start -->
+     <h1 class="categoriesheading">Shop by Categories</h1>
+     <div class="categories-buttons">
+        <button onclick="filterByCategory('All')" class="category-button" data-category="All">All</button>
+        <button onclick="filterByCategory('Shoes')" class="category-button" data-category="Shoes">Shoes</button>
+        <button onclick="filterByCategory('Clothing')" class="category-button" data-category="Clothing">Clothing</button>
+        <button onclick="filterByCategory('Accessories')" class="category-button" data-category="Accessories">Accessories</button>
+        <button onclick="filterByCategory('Electronics')" class="category-button" data-category="Electronics">Electronics</button>
+     </div>
+<div class="product-container" id="productContainer">
+    <!-- shop by categories end -->
+  </body>
+</html>

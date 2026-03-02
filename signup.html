@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        .signup-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .signup-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .signup-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .signup-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .signup-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .signup-container button:hover {
+            background-color: #0056b3;
+        }
+        .signup-container p {
+            text-align: center;
+        }
+        .signup-container a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .signup-container a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- sing up page -->
+    <div class="signup-container">
+        <h2>Create Your Account</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="loging.html">Login here</a>.</p>   
+    </div>
+</body>
+<script>
+// when we click on the singup btn we will move to the login page and they will show in the local storage that the user is created and they can login with the email and password that they created in the signup page
+
+    
+    const signupForm = document.querySelector('.signup-container form');
+    signupForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+        // Here you can add code to handle the sign-up logic (e.g., validation, sending data to server)
+        alert('Account created successfully! Please login.');
+        window.location.href = 'loging.html'; // Redirect to login page
+    });
+
+</script>
+</html>
